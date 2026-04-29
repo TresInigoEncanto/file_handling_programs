@@ -1,5 +1,23 @@
 class OddEvenSorter:
-    def __init__(self, input_file):
-        self.input_file = input_file
+    def __init__(self, input_filename):
+        self.input_file = input_filename
         self.even_file = "even.txt"
         self.odd_file = "odd.txt"
+    
+    def process_files(self):
+        try:
+            with open(self.input_filename, 'r') as source_file:
+                #1. To remove the integers from the source file
+                numbers = [int(line.strip()) for line in source_file if line.strip()]
+            
+            #2. Output destinations
+            with open(self.even_filename, 'w') as even_output, \
+                 open(self.odd_filename, 'w') as odd_output:
+
+                for num in numbers:
+                    if num % 2 == 0:
+                        even_output.write(f"{num}\n")
+                    else:
+                        odd_output.write(f"{num}\n")
+
+            return True
