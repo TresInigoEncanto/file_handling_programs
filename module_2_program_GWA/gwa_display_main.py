@@ -6,7 +6,7 @@ def main_program():
     top_student = sorter.highest_gwa()
 
     if top_student:
-        print(f"The top student of the class is {top_student.name} with GWA of {top_student.gwa}")
+        print(f"The top student of the class is {top_student.name} with a General Weighted Average of {top_student.gwa}")
 
 if __name__ == "__main__":
     main_program()
