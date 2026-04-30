@@ -21,3 +21,11 @@ class OddEvenSorter:
                         odd_output.write(f"{num}\n")
 
             return True
+
+        except FileNotFoundError:
+             print(f"Could not find the file '{self.input_filename}'.")
+             return False
+
+        except ValueError:
+            print("The file contains non-numeric data.")
+            return False
