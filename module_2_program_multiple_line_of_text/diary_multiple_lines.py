@@ -21,4 +21,6 @@ class MyDiary:
         except IOError as error:
             print(f"An error occured while writing the file: {error}")
 
-
+if __name__ == "__main__":
+    multiple_lines = MyDiary()
+    multiple_lines.write_entry()
