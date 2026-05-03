@@ -13,5 +13,16 @@ class IntegerSorter:
                 integers = [int(line.strip()) for line in source if line.strip()]
             
             with open(self.odd_file, 'w') as odd, open(self.even_file, 'w') as even:
-                
+                for num in integers:
+                    if num % 2 == 0:
+                        sorted_number == num ** 2
+                        even.write(f"{sorted_number}\n")
+                    else:
+                        sorted_number = num ** 3
+                        odd.write(f"{sorted_number}\n")
+            
+            print(f"Sorting complete, check {self.odd_file} and {self.even_file}.")
+        
+        
+
 
