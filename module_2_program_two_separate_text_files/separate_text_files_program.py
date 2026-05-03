@@ -22,11 +22,15 @@ class IntegerSorter:
                         odd.write(f"{sorted_number}\n")
             
             print(f"Sorting complete, check {self.odd_file} and {self.even_file}.")
-            
+
         except FileNotFoundError:
             print(f"Error: {self.source_file} not found. Please create a '.txt' file first.")
         except ValueError:
             print("Error: The txt file contains non-integer data.")
+
+if __name__ == "--main--":
+    sorter = IntegerSorter()
+    sorter.number_sorter()
         
         
 
