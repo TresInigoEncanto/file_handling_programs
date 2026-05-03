@@ -6,4 +6,11 @@ class IntegerSorter:
         self.odd_file = "triple.txt"
         self.even_file = "double.txt"
     
-   
+    def number_sorter(self):
+        """Program to read the integers and sort them based on parity."""
+        try:
+            with open(self.source_file, 'r') as source:
+                integers = [int(line.strip()) for line in source if line.strip()]
+            
+            
+
