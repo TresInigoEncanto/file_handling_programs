@@ -12,5 +12,6 @@ class IntegerSorter:
             with open(self.source_file, 'r') as source:
                 integers = [int(line.strip()) for line in source if line.strip()]
             
-            
+            with open(self.odd_file, 'w') as odd, open(self.even_file, 'w') as even:
+                
 
